@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">E-clinet</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="server">server:</string>
+    <string name="username">username:</string>
+    <string name="password">password:</string>
+    <string name="login">login</string>
+    <string name="cancel">cancel</string>
+    <string name="remember">remember</string>
+    <string name="compose">compose</string>
+    <string name="inbox">inbox</string>
+    <string name="sent">sent</string>
+    <string name="deleted">deleted</string>
+    <string name="draft">draft</string>
+    <string name="trash">trash</string>
+    <string name="OK">OK</string>
+    <string name="to">To:</string>
+    <string name="cc">cc:</string>
+    <string name="e_title">Title:</string>
+    <string name="back">back</string>
+
+</resources>

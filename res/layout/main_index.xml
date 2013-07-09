@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/compose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:text="@string/compose" />
+
+        <TextView
+            android:id="@+id/accountMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="21dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_weight="0.2"
+            android:id="@+id/inbox"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/inbox" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_weight="0.2"
+            android:id="@+id/sent"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/sent" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_weight="0.2"
+            android:id="@+id/deleted"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/deleted" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_weight="0.2"
+            android:id="@+id/draft"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/draft" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_weight="0.2"
+            android:id="@+id/trash"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/trash" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="366dp" >
+    </ListView>
+
+</LinearLayout>
