@@ -1,4 +1,8 @@
-package com.wu.e_clinet;
+package com.wu.eclient;
+
+import com.wu.data.UserInfo;
+import com.wu.e_clinet.R;
+import com.wu.serverjni.ServerJni;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -14,6 +18,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 
+	private ServerJni serverJni;
 	private Context context;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +26,7 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.login);
 		context = this;
 		this.setListener();
-		
+		//Toast.makeText(context, ServerJni.test(), Toast.LENGTH_LONG).show();
 	}
 
 	private void setListener(){
@@ -44,7 +49,18 @@ public class LoginActivity extends Activity {
 				String username = eUsername.getText().toString();
 				String password = ePassword.getText().toString();
 				String server = serverAdd.getSelectedItem().toString();
-				Toast.makeText(context, username+password+server, Toast.LENGTH_LONG).show();
+				String serAddr = "imap."+server;
+				UserInfo userInfo = new UserInfo();
+				userInfo.username = username;
+				userInfo.password = password; 
+				userInfo.serAddr = serAddr;
+				
+				int ret = ServerJni.login(userInfo);
+				if (ret < 0){
+					Toast.makeText(context, "login error! error code "+ret, Toast.LENGTH_LONG).show();
+					return;
+				}
+				
 				Intent intent = new Intent(LoginActivity.this,MainInbox.class);
 				Bundle bundle=new Bundle();
 				bundle.putString("name",username+"@"+server);

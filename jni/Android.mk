@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-MY_JNI_FOLDER1 := $(call my-dir)
+MY_JNI_FOLDER:= $(call my-dir)
 
-include $(MY_JNI_FOLDER1)/server/Android.mk
-include $(MY_JNI_FOLDER1)/serverjni/Android.mk
+include $(MY_JNI_FOLDER)/server/Android.mk
+include $(MY_JNI_FOLDER)/serverjni/Android.mk
 

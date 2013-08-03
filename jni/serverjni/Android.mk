@@ -17,9 +17,9 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := serverjni
-LOCAL_C_INCLUDES := $(LOCAL_PATH)\
-					$(LOCAL_PATH)/../server/
+LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../server
 LOCAL_SRC_FILES := serverjni.c
 LOCAL_STATIC_LIBRARIES := server
 
-include $(BUILD_SHARE_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)

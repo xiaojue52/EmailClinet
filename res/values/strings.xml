@@ -21,5 +21,6 @@
     <string name="cc">cc:</string>
     <string name="e_title">Title:</string>
     <string name="back">back</string>
+    <string name="logout">logout</string>
 
 </resources>

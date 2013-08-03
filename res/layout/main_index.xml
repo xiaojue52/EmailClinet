@@ -23,8 +23,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="21dp"
-            android:text="TextView" />
+            android:layout_marginRight="60dp"/>
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/logout"
+            android:layout_width="58dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/logout" />
 
     </RelativeLayout>
 
