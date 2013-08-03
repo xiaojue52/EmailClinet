@@ -17,7 +17,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := server
-LOCAL_C_INCLUDES := $(LOCAL_PATH)
+LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/
 LOCAL_SRC_FILES := server.c
 
 include $(BUILD_STATIC_LIBRARY)
